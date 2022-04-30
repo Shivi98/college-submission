@@ -1,0 +1,837 @@
+{
+    "final_tick": "5112126264500",
+    "host_inst_rate": "1019778",
+    "host_mem_usage": "640200",
+    "host_op_rate": "2087932",
+    "host_seconds": "196.05",
+    "host_tick_rate": "26075321841",
+    "sim_freq": "1000000000000",
+    "sim_insts": "199929810",
+    "sim_ops": "409343850",
+    "sim_seconds": "5.112126",
+    "sim_ticks": "5112126264500",
+    "system": {
+        "clk_domain": {
+            "clock": "1000"
+        },
+        "cpu": {
+            "Branches": "43125514",
+            "apic_clk_domain": {
+                "clock": "8000"
+            },
+            "committedInsts": "199929810",
+            "committedOps": "409343850",
+            "dcache": {
+                "ReadReq_accesses": {
+                    "cpu.data": "13385961",
+                    "total": "13385961"
+                },
+                "ReadReq_hits": {
+                    "cpu.data": "12077531",
+                    "total": "12077531"
+                },
+                "ReadReq_miss_rate": {
+                    "cpu.data": "0.097746",
+                    "total": "0.097746"
+                },
+                "ReadReq_misses": {
+                    "cpu.data": "1308430",
+                    "total": "1308430"
+                },
+                "WriteReq_accesses": {
+                    "cpu.data": "8411843",
+                    "total": "8411843"
+                },
+                "WriteReq_hits": {
+                    "cpu.data": "8095378",
+                    "total": "8095378"
+                },
+                "WriteReq_miss_rate": {
+                    "cpu.data": "0.037621",
+                    "total": "0.037621"
+                },
+                "WriteReq_misses": {
+                    "cpu.data": "316465",
+                    "total": "316465"
+                },
+                "avg_blocked_cycles": {
+                    "no_mshrs": "nan",
+                    "no_targets": "nan"
+                },
+                "blocked": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "blocked_cycles": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "cache_copies": "0",
+                "demand_accesses": {
+                    "cpu.data": "21797804",
+                    "total": "21797804"
+                },
+                "demand_hits": {
+                    "cpu.data": "20172909",
+                    "total": "20172909"
+                },
+                "demand_miss_rate": {
+                    "cpu.data": "0.074544",
+                    "total": "0.074544"
+                },
+                "demand_misses": {
+                    "cpu.data": "1624895",
+                    "total": "1624895"
+                },
+                "fast_writes": "0",
+                "no_allocate_misses": "0",
+                "overall_accesses": {
+                    "cpu.data": "21797804",
+                    "total": "21797804"
+                },
+                "overall_hits": {
+                    "cpu.data": "20172909",
+                    "total": "20172909"
+                },
+                "overall_miss_rate": {
+                    "cpu.data": "0.074544",
+                    "total": "0.074544"
+                },
+                "overall_misses": {
+                    "cpu.data": "1624895",
+                    "total": "1624895"
+                },
+                "tags": {
+                    "age_task_id_blocks_1024": {
+                        "0": "226",
+                        "1": "259",
+                        "2": "27"
+                    },
+                    "avg_refs": "12.433790",
+                    "data_accesses": "88813841",
+                    "occ_blocks": {
+                        "cpu.data": "511.999424"
+                    },
+                    "occ_percent": {
+                        "cpu.data": "0.999999",
+                        "total": "0.999999"
+                    },
+                    "occ_task_id_blocks": {
+                        "1024": "512"
+                    },
+                    "occ_task_id_percent": {
+                        "1024": "1"
+                    },
+                    "replacements": "1622097",
+                    "sampled_refs": "1622609",
+                    "tag_accesses": "88813841",
+                    "tagsinuse": "511.999424",
+                    "total_refs": "20175179",
+                    "warmup_cycle": "7549500"
+                },
+                "writebacks": {
+                    "total": "1535825",
+                    "writebacks": "1535825"
+                }
+            },
+            "dtb_walker_cache": {
+                "ReadReq_accesses": {
+                    "cpu.dtb.walker": "21787",
+                    "total": "21787"
+                },
+                "ReadReq_hits": {
+                    "cpu.dtb.walker": "12963",
+                    "total": "12963"
+                },
+                "ReadReq_miss_rate": {
+                    "cpu.dtb.walker": "0.405012",
+                    "total": "0.405012"
+                },
+                "ReadReq_misses": {
+                    "cpu.dtb.walker": "8824",
+                    "total": "8824"
+                },
+                "avg_blocked_cycles": {
+                    "no_mshrs": "nan",
+                    "no_targets": "nan"
+                },
+                "blocked": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "blocked_cycles": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "cache_copies": "0",
+                "demand_accesses": {
+                    "cpu.dtb.walker": "21787",
+                    "total": "21787"
+                },
+                "demand_hits": {
+                    "cpu.dtb.walker": "12963",
+                    "total": "12963"
+                },
+                "demand_miss_rate": {
+                    "cpu.dtb.walker": "0.405012",
+                    "total": "0.405012"
+                },
+                "demand_misses": {
+                    "cpu.dtb.walker": "8824",
+                    "total": "8824"
+                },
+                "fast_writes": "0",
+                "no_allocate_misses": "0",
+                "overall_accesses": {
+                    "cpu.dtb.walker": "21787",
+                    "total": "21787"
+                },
+                "overall_hits": {
+                    "cpu.dtb.walker": "12963",
+                    "total": "12963"
+                },
+                "overall_miss_rate": {
+                    "cpu.dtb.walker": "0.405012",
+                    "total": "0.405012"
+                },
+                "overall_misses": {
+                    "cpu.dtb.walker": "8824",
+                    "total": "8824"
+                },
+                "tags": {
+                    "age_task_id_blocks_1024": {
+                        "0": "5",
+                        "1": "2",
+                        "2": "5"
+                    },
+                    "avg_refs": "1.694793",
+                    "data_accesses": "52398",
+                    "occ_blocks": {
+                        "cpu.dtb.walker": "5.014181"
+                    },
+                    "occ_percent": {
+                        "cpu.dtb.walker": "0.313386",
+                        "total": "0.313386"
+                    },
+                    "occ_task_id_blocks": {
+                        "1024": "12"
+                    },
+                    "occ_task_id_percent": {
+                        "1024": "0.750000"
+                    },
+                    "replacements": "7632",
+                    "sampled_refs": "7644",
+                    "tag_accesses": "52398",
+                    "tagsinuse": "5.014181",
+                    "total_refs": "12955",
+                    "warmup_cycle": "5100462243000"
+                },
+                "writebacks": {
+                    "total": "2433",
+                    "writebacks": "2433"
+                }
+            },
+            "icache": {
+                "ReadReq_accesses": {
+                    "cpu.inst": "244316855",
+                    "total": "244316855"
+                },
+                "ReadReq_hits": {
+                    "cpu.inst": "243525778",
+                    "total": "243525778"
+                },
+                "ReadReq_miss_rate": {
+                    "cpu.inst": "0.003238",
+                    "total": "0.003238"
+                },
+                "ReadReq_misses": {
+                    "cpu.inst": "791077",
+                    "total": "791077"
+                },
+                "avg_blocked_cycles": {
+                    "no_mshrs": "nan",
+                    "no_targets": "nan"
+                },
+                "blocked": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "blocked_cycles": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "cache_copies": "0",
+                "demand_accesses": {
+                    "cpu.inst": "244316855",
+                    "total": "244316855"
+                },
+                "demand_hits": {
+                    "cpu.inst": "243525778",
+                    "total": "243525778"
+                },
+                "demand_miss_rate": {
+                    "cpu.inst": "0.003238",
+                    "total": "0.003238"
+                },
+                "demand_misses": {
+                    "cpu.inst": "791077",
+                    "total": "791077"
+                },
+                "fast_writes": "0",
+                "no_allocate_misses": "0",
+                "overall_accesses": {
+                    "cpu.inst": "244316855",
+                    "total": "244316855"
+                },
+                "overall_hits": {
+                    "cpu.inst": "243525778",
+                    "total": "243525778"
+                },
+                "overall_miss_rate": {
+                    "cpu.inst": "0.003238",
+                    "total": "0.003238"
+                },
+                "overall_misses": {
+                    "cpu.inst": "791077",
+                    "total": "791077"
+                },
+                "tags": {
+                    "age_task_id_blocks_1024": {
+                        "0": "87",
+                        "1": "134",
+                        "2": "291"
+                    },
+                    "avg_refs": "307.843526",
+                    "data_accesses": "245107932",
+                    "occ_blocks": {
+                        "cpu.inst": "510.665021"
+                    },
+                    "occ_percent": {
+                        "cpu.inst": "0.997393",
+                        "total": "0.997393"
+                    },
+                    "occ_task_id_blocks": {
+                        "1024": "512"
+                    },
+                    "occ_task_id_percent": {
+                        "1024": "1"
+                    },
+                    "replacements": "790558",
+                    "sampled_refs": "791070",
+                    "tag_accesses": "245107932",
+                    "tagsinuse": "510.665021",
+                    "total_refs": "243525778",
+                    "warmup_cycle": "148848615500"
+                }
+            },
+            "idle_fraction": "0.955622",
+            "itb_walker_cache": {
+                "ReadReq_accesses": {
+                    "cpu.itb.walker": "12219",
+                    "total": "12219"
+                },
+                "ReadReq_hits": {
+                    "cpu.itb.walker": "7887",
+                    "total": "7887"
+                },
+                "ReadReq_miss_rate": {
+                    "cpu.itb.walker": "0.354530",
+                    "total": "0.354530"
+                },
+                "ReadReq_misses": {
+                    "cpu.itb.walker": "4332",
+                    "total": "4332"
+                },
+                "WriteReq_accesses": {
+                    "cpu.itb.walker": "2",
+                    "total": "2"
+                },
+                "WriteReq_hits": {
+                    "cpu.itb.walker": "2",
+                    "total": "2"
+                },
+                "avg_blocked_cycles": {
+                    "no_mshrs": "nan",
+                    "no_targets": "nan"
+                },
+                "blocked": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "blocked_cycles": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "cache_copies": "0",
+                "demand_accesses": {
+                    "cpu.itb.walker": "12221",
+                    "total": "12221"
+                },
+                "demand_hits": {
+                    "cpu.itb.walker": "7889",
+                    "total": "7889"
+                },
+                "demand_miss_rate": {
+                    "cpu.itb.walker": "0.354472",
+                    "total": "0.354472"
+                },
+                "demand_misses": {
+                    "cpu.itb.walker": "4332",
+                    "total": "4332"
+                },
+                "fast_writes": "0",
+                "no_allocate_misses": "0",
+                "overall_accesses": {
+                    "cpu.itb.walker": "12221",
+                    "total": "12221"
+                },
+                "overall_hits": {
+                    "cpu.itb.walker": "7889",
+                    "total": "7889"
+                },
+                "overall_miss_rate": {
+                    "cpu.itb.walker": "0.354472",
+                    "total": "0.354472"
+                },
+                "overall_misses": {
+                    "cpu.itb.walker": "4332",
+                    "total": "4332"
+                },
+                "tags": {
+                    "age_task_id_blocks_1024": {
+                        "0": "5",
+                        "1": "2",
+                        "2": "5"
+                    },
+                    "avg_refs": "2.260246",
+                    "data_accesses": "28774",
+                    "occ_blocks": {
+                        "cpu.itb.walker": "3.026303"
+                    },
+                    "occ_percent": {
+                        "cpu.itb.walker": "0.189144",
+                        "total": "0.189144"
+                    },
+                    "occ_task_id_blocks": {
+                        "1024": "12"
+                    },
+                    "occ_task_id_percent": {
+                        "1024": "0.750000"
+                    },
+                    "replacements": "3477",
+                    "sampled_refs": "3489",
+                    "tag_accesses": "28774",
+                    "tagsinuse": "3.026303",
+                    "total_refs": "7886",
+                    "warmup_cycle": "5102116468000"
+                },
+                "writebacks": {
+                    "total": "526",
+                    "writebacks": "526"
+                }
+            },
+            "kern": {
+                "inst": {
+                    "arm": "0",
+                    "quiesce": "0"
+                }
+            },
+            "l2cache": {
+                "ReadExReq_accesses": {
+                    "cpu.data": "314190",
+                    "total": "314190"
+                },
+                "ReadExReq_hits": {
+                    "cpu.data": "179732",
+                    "total": "179732"
+                },
+                "ReadExReq_miss_rate": {
+                    "cpu.data": "0.427951",
+                    "total": "0.427951"
+                },
+                "ReadExReq_misses": {
+                    "cpu.data": "134458",
+                    "total": "134458"
+                },
+                "ReadReq_accesses": {
+                    "cpu.data": "1307800",
+                    "cpu.dtb.walker": "6505",
+                    "cpu.inst": "791064",
+                    "cpu.itb.walker": "2807",
+                    "total": "2108176"
+                },
+                "ReadReq_hits": {
+                    "cpu.data": "1275554",
+                    "cpu.dtb.walker": "6504",
+                    "cpu.inst": "777739",
+                    "cpu.itb.walker": "2802",
+                    "total": "2062599"
+                },
+                "ReadReq_miss_rate": {
+                    "cpu.data": "0.024657",
+                    "cpu.dtb.walker": "0.000154",
+                    "cpu.inst": "0.016844",
+                    "cpu.itb.walker": "0.001781",
+                    "total": "0.021619"
+                },
+                "ReadReq_misses": {
+                    "cpu.data": "32246",
+                    "cpu.dtb.walker": "1",
+                    "cpu.inst": "13325",
+                    "cpu.itb.walker": "5",
+                    "total": "45577"
+                },
+                "UpgradeReq_accesses": {
+                    "cpu.data": "1825",
+                    "total": "1825"
+                },
+                "UpgradeReq_hits": {
+                    "cpu.data": "20",
+                    "total": "20"
+                },
+                "UpgradeReq_miss_rate": {
+                    "cpu.data": "0.989041",
+                    "total": "0.989041"
+                },
+                "UpgradeReq_misses": {
+                    "cpu.data": "1805",
+                    "total": "1805"
+                },
+                "Writeback_accesses": {
+                    "total": "1538784",
+                    "writebacks": "1538784"
+                },
+                "Writeback_hits": {
+                    "total": "1538784",
+                    "writebacks": "1538784"
+                },
+                "avg_blocked_cycles": {
+                    "no_mshrs": "nan",
+                    "no_targets": "nan"
+                },
+                "blocked": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "blocked_cycles": {
+                    "no_mshrs": "0",
+                    "no_targets": "0"
+                },
+                "cache_copies": "0",
+                "demand_accesses": {
+                    "cpu.data": "1621990",
+                    "cpu.dtb.walker": "6505",
+                    "cpu.inst": "791064",
+                    "cpu.itb.walker": "2807",
+                    "total": "2422366"
+                },
+                "demand_hits": {
+                    "cpu.data": "1455286",
+                    "cpu.dtb.walker": "6504",
+                    "cpu.inst": "777739",
+                    "cpu.itb.walker": "2802",
+                    "total": "2242331"
+                },
+                "demand_miss_rate": {
+                    "cpu.data": "0.102777",
+                    "cpu.dtb.walker": "0.000154",
+                    "cpu.inst": "0.016844",
+                    "cpu.itb.walker": "0.001781",
+                    "total": "0.074322"
+                },
+                "demand_misses": {
+                    "cpu.data": "166704",
+                    "cpu.dtb.walker": "1",
+                    "cpu.inst": "13325",
+                    "cpu.itb.walker": "5",
+                    "total": "180035"
+                },
+                "fast_writes": "0",
+                "no_allocate_misses": "0",
+                "overall_accesses": {
+                    "cpu.data": "1621990",
+                    "cpu.dtb.walker": "6505",
+                    "cpu.inst": "791064",
+                    "cpu.itb.walker": "2807",
+                    "total": "2422366"
+                },
+                "overall_hits": {
+                    "cpu.data": "1455286",
+                    "cpu.dtb.walker": "6504",
+                    "cpu.inst": "777739",
+                    "cpu.itb.walker": "2802",
+                    "total": "2242331"
+                },
+                "overall_miss_rate": {
+                    "cpu.data": "0.102777",
+                    "cpu.dtb.walker": "0.000154",
+                    "cpu.inst": "0.016844",
+                    "cpu.itb.walker": "0.001781",
+                    "total": "0.074322"
+                },
+                "overall_misses": {
+                    "cpu.data": "166704",
+                    "cpu.dtb.walker": "1",
+                    "cpu.inst": "13325",
+                    "cpu.itb.walker": "5",
+                    "total": "180035"
+                },
+                "tags": {
+                    "age_task_id_blocks_1024": {
+                        "0": "46",
+                        "1": "282",
+                        "2": "3455",
+                        "3": "20892",
+                        "4": "39453"
+                    },
+                    "avg_refs": "20.317898",
+                    "data_accesses": "32198887",
+                    "occ_blocks": {
+                        "cpu.data": "10422.520587",
+                        "cpu.dtb.walker": "0.002479",
+                        "cpu.inst": "2490.539598",
+                        "cpu.itb.walker": "0.132255",
+                        "writebacks": "51908.839094"
+                    },
+                    "occ_percent": {
+                        "cpu.data": "0.159035",
+                        "cpu.dtb.walker": "0.000000",
+                        "cpu.inst": "0.038003",
+                        "cpu.itb.walker": "0.000002",
+                        "total": "0.989106",
+                        "writebacks": "0.792066"
+                    },
+                    "occ_task_id_blocks": {
+                        "1024": "64128"
+                    },
+                    "occ_task_id_percent": {
+                        "1024": "0.978516"
+                    },
+                    "replacements": "105999",
+                    "sampled_refs": "170127",
+                    "tag_accesses": "32198887",
+                    "tagsinuse": "64822.034013",
+                    "total_refs": "3456623",
+                    "warmup_cycle": "0"
+                },
+                "writebacks": {
+                    "total": "98156",
+                    "writebacks": "98156"
+                }
+            },
+            "not_idle_fraction": "0.044378",
+            "numCycles": "10224253904",
+            "numWorkItemsCompleted": "0",
+            "numWorkItemsStarted": "0",
+            "num_busy_cycles": "453735690.308166",
+            "num_cc_register_reads": "233715040",
+            "num_cc_register_writes": "157233555",
+            "num_conditional_control_insts": "39976328",
+            "num_fp_alu_accesses": "0",
+            "num_fp_insts": "0",
+            "num_fp_register_reads": "0",
+            "num_fp_register_writes": "0",
+            "num_func_calls": "2307717",
+            "num_idle_cycles": "9770518213.691833",
+            "num_int_alu_accesses": "374364636",
+            "num_int_insts": "374364636",
+            "num_int_register_reads": "682285475",
+            "num_int_register_writes": "323369236",
+            "num_load_insts": "27238816",
+            "num_mem_refs": "35660913",
+            "num_store_insts": "8422097",
+            "toL2Bus": {
+                "data_through_bus": "279225555",
+                "snoop_data_through_bus": "25472",
+                "throughput": "54625221"
+            }
+        },
+        "cpu_clk_domain": {
+            "clock": "500"
+        },
+        "iobus": {
+            "data_through_bus": "13062542",
+            "throughput": "2555207"
+        },
+        "iocache": {
+            "ReadReq_accesses": {
+                "pc.south_bridge.ide": "904",
+                "total": "904"
+            },
+            "ReadReq_miss_rate": {
+                "pc.south_bridge.ide": "1",
+                "total": "1"
+            },
+            "ReadReq_misses": {
+                "pc.south_bridge.ide": "904",
+                "total": "904"
+            },
+            "WriteReq_accesses": {
+                "pc.south_bridge.ide": "46720",
+                "total": "46720"
+            },
+            "WriteReq_miss_rate": {
+                "pc.south_bridge.ide": "1",
+                "total": "1"
+            },
+            "WriteReq_misses": {
+                "pc.south_bridge.ide": "46720",
+                "total": "46720"
+            },
+            "avg_blocked_cycles": {
+                "no_mshrs": "nan",
+                "no_targets": "nan"
+            },
+            "blocked": {
+                "no_mshrs": "0",
+                "no_targets": "0"
+            },
+            "blocked_cycles": {
+                "no_mshrs": "0",
+                "no_targets": "0"
+            },
+            "cache_copies": "0",
+            "demand_accesses": {
+                "pc.south_bridge.ide": "47624",
+                "total": "47624"
+            },
+            "demand_miss_rate": {
+                "pc.south_bridge.ide": "1",
+                "total": "1"
+            },
+            "demand_misses": {
+                "pc.south_bridge.ide": "47624",
+                "total": "47624"
+            },
+            "fast_writes": "0",
+            "no_allocate_misses": "0",
+            "overall_accesses": {
+                "pc.south_bridge.ide": "47624",
+                "total": "47624"
+            },
+            "overall_miss_rate": {
+                "pc.south_bridge.ide": "1",
+                "total": "1"
+            },
+            "overall_misses": {
+                "pc.south_bridge.ide": "47624",
+                "total": "47624"
+            },
+            "tags": {
+                "age_task_id_blocks_1023": {
+                    "2": "16"
+                },
+                "avg_refs": "0",
+                "data_accesses": "428616",
+                "occ_blocks": {
+                    "pc.south_bridge.ide": "0.042448"
+                },
+                "occ_percent": {
+                    "pc.south_bridge.ide": "0.002653",
+                    "total": "0.002653"
+                },
+                "occ_task_id_blocks": {
+                    "1023": "16"
+                },
+                "occ_task_id_percent": {
+                    "1023": "1"
+                },
+                "replacements": "47569",
+                "sampled_refs": "47585",
+                "tag_accesses": "428616",
+                "tagsinuse": "0.042448",
+                "total_refs": "0",
+                "warmup_cycle": "4994846763009"
+            },
+            "writebacks": {
+                "total": "46667",
+                "writebacks": "46667"
+            }
+        },
+        "membus": {
+            "data_through_bus": "49251923",
+            "snoop_data_through_bus": "0",
+            "throughput": "9634332"
+        },
+        "pc": {
+            "south_bridge": {
+                "ide": {
+                    "disks0": {
+                        "dma_read_bytes": "34816",
+                        "dma_read_full_pages": "0",
+                        "dma_read_txs": "32",
+                        "dma_write_bytes": "2985984",
+                        "dma_write_full_pages": "693",
+                        "dma_write_txs": "812"
+                    },
+                    "disks1": {
+                        "dma_read_bytes": "0",
+                        "dma_read_full_pages": "0",
+                        "dma_read_txs": "0",
+                        "dma_write_bytes": "4096",
+                        "dma_write_full_pages": "1",
+                        "dma_write_txs": "1"
+                    }
+                }
+            }
+        },
+        "physmem": {
+            "bw_inst_read": {
+                "cpu.inst": "166807",
+                "total": "166807"
+            },
+            "bw_read": {
+                "cpu.data": "2075329",
+                "cpu.dtb.walker": "13",
+                "cpu.inst": "166807",
+                "cpu.itb.walker": "63",
+                "pc.south_bridge.ide": "473616",
+                "total": "2715827"
+            },
+            "bw_total": {
+                "cpu.data": "2075329",
+                "cpu.dtb.walker": "13",
+                "cpu.inst": "166807",
+                "cpu.itb.walker": "63",
+                "pc.south_bridge.ide": "473616",
+                "total": "4528902",
+                "writebacks": "1813076"
+            },
+            "bw_write": {
+                "total": "1813076",
+                "writebacks": "1813076"
+            },
+            "bytes_inst_read": {
+                "cpu.inst": "852736",
+                "total": "852736"
+            },
+            "bytes_read": {
+                "cpu.data": "10609344",
+                "cpu.dtb.walker": "64",
+                "cpu.inst": "852736",
+                "cpu.itb.walker": "320",
+                "pc.south_bridge.ide": "2421184",
+                "total": "13883648"
+            },
+            "bytes_written": {
+                "total": "9268672",
+                "writebacks": "9268672"
+            },
+            "num_reads": {
+                "cpu.data": "165771",
+                "cpu.dtb.walker": "1",
+                "cpu.inst": "13324",
+                "cpu.itb.walker": "5",
+                "pc.south_bridge.ide": "37831",
+                "total": "216932"
+            },
+            "num_writes": {
+                "total": "144823",
+                "writebacks": "144823"
+            }
+        },
+        "voltage_domain": {
+            "voltage": "1"
+        }
+    }
+}

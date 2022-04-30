@@ -1,0 +1,20 @@
+<ul class="list-group" *ngFor="let entry of schema | keyvalue">
+  <li class="list-group-item" [class.active]="!(entry.value | isObject) && selectedKey === entry.key && selectedPath.length === 1">
+    <span (click)="onLabelClick($any(entry))">
+      <fa-icon
+        [icon]="expanded.has($any(entry.key)) ? faFolderOpen : faFolderClosed"
+        *ngIf="entry.value | isObject else fileIcon"
+      ></fa-icon>
+      <ng-template #fileIcon>
+        <fa-icon [icon]="faFile"></fa-icon>
+      </ng-template>
+      {{ entry.key }}
+    </span>
+    <app-tree
+      [schema]="schema[entry.key]"
+      *ngIf="(schema[entry.key] | isObject) && expanded.has($any(entry.key))"
+      (keySelected)="onKeySelected($event, $any(entry.key))"
+    ></app-tree>
+  </li>
+</ul>
+

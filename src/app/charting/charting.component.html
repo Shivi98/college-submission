@@ -1,0 +1,49 @@
+<div class="d-flex row justify-content-center" [formGroup]="form">
+  <div class="row justify-content-center">
+    <div class="col-sm-3">
+      <select
+        class="form-select"
+        aria-label="File Name Selector 1"
+        formControlName="file1"
+        (ngModelChange)="enableOrDisableRelatedField()"
+      >
+        <option value="">Select File Name</option>
+        <option *ngFor="let name of files" value="{{ name }}">{{ name }}</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <select
+        class="form-select"
+        aria-label="File Name Selector 2"
+        formControlName="file2"
+      >
+        <option value="">Select Second File</option>
+        <option *ngFor="let name of files | filter: this.form.get('file1').value" value="{{ name }}">{{ name }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-4 tree-container mt-4">
+      <app-tree [schema]="fileObject$ | async" (keySelected)="onKeySelected($event)"></app-tree>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex row justify-content-center">
+  <div class="col-sm-6" *ngIf="chartData$ | async as chartData">
+    <ngx-charts-bar-vertical
+      [view]="view"
+      [results]="chartData"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+</div>
