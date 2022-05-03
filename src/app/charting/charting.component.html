@@ -5,7 +5,6 @@
         class="form-select"
         aria-label="File Name Selector 1"
         formControlName="file1"
-        (ngModelChange)="enableOrDisableRelatedField()"
       >
         <option value="">Select File Name</option>
         <option *ngFor="let name of files" value="{{ name }}">{{ name }}</option>
@@ -18,7 +17,27 @@
         formControlName="file2"
       >
         <option value="">Select Second File</option>
-        <option *ngFor="let name of files | filter: this.form.get('file1').value" value="{{ name }}">{{ name }}</option>
+        <option *ngFor="let name of files" value="{{ name }}">{{ name }}</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <select
+        class="form-select"
+        aria-label="File Name Selector 3"
+        formControlName="file3"
+      >
+        <option value="">Select File Name</option>
+        <option *ngFor="let name of files" value="{{ name }}">{{ name }}</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <select
+        class="form-select"
+        aria-label="File Name Selector 4"
+        formControlName="file4"
+      >
+        <option value="">Select File Name</option>
+        <option *ngFor="let name of files" value="{{ name }}">{{ name }}</option>
       </select>
     </div>
   </div>

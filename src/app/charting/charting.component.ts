@@ -13,7 +13,9 @@ export class ChartingComponent implements OnInit {
   files: string[] = ["File One", "File Two", "File Three"];
   form = this.formBuilder.group({
     file1: ["", [Validators.required]],
-    file2: [{ value: "", disabled: true }, [Validators.required]],
+    file2: ["", [Validators.required]],
+    file3: ["", [Validators.required]],
+    file4: ["", [Validators.required]],
     key: [[], [Validators.required]]
   });
   fileObject$ = this.backendService.dummyFileObject();
@@ -34,17 +36,18 @@ export class ChartingComponent implements OnInit {
   }
 
   async ngOnInit() {
+    this.files = await this.backendService.getFiles().toPromise();
+
+    const fileKeys = ["file1", "file2", "file3", "file4"];
     this.chartData$ = this.form.valueChanges.pipe(
-      filter((formValue) => formValue.file1 && formValue.file2 && formValue.key.length),
-      switchMap((formValue) => forkJoin([this.backendService.getFileToTally(formValue.file1), this.backendService.getFileToTally(formValue.file2)])),
-      map(([file1, file2]) => {
+      filter((formValue) => fileKeys.every((name) => !!formValue[name]) && formValue.key.length),
+      switchMap((formValue) => forkJoin(fileKeys.map(name => this.backendService.getFileToTally(formValue[name])))),
+      map((files: any[]) => {
         const formValue = this.form.getRawValue();
         this.yAxisLabel = formValue.key[formValue.key.length - 1];
-
-        return [
-          { name: formValue.file1, value: this.getValueFromSchema(file1, formValue.key) },
-          { name: formValue.file2, value: this.getValueFromSchema(file2, formValue.key) }
-        ];
+        return fileKeys.map((name, index) => {
+          return { name: formValue[name], value: this.getValueFromSchema(files[index], formValue.key) };
+        });
       })
     );
   }

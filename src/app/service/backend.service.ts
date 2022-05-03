@@ -26,6 +26,6 @@ export class BackendService {
   }
 
   getFiles(): Observable<string[]> {
-    return this.httpClient.get(`${this.BASE_URL}/getFiles`).pipe(map((response) => response["fileId_list"]));
+    return this.httpClient.get(`${this.BASE_URL}/getFiles`).pipe(map((response: Array<Object>) => response.map((obj) => obj["fileId"])));
   }
 }
