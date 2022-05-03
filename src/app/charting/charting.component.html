@@ -42,9 +42,9 @@
     </div>
   </div>
 
-  <div class="row justify-content-center" *ngIf="fileContentMap.get('file1')">
+  <div class="row justify-content-center" *ngIf="fileContentMap.get('file1') as file">
     <div class="col-sm-4 tree-container mt-4">
-      <app-tree [schema]="fileObject$ | async" (keySelected)="onKeySelected($event)"></app-tree>
+      <app-tree [schema]="file" (keySelected)="onKeySelected($event)"></app-tree>
     </div>
   </div>
 </div>
