@@ -1,14 +1,15 @@
-import { Component, HostBinding, OnInit }               from "@angular/core";
-import { filter, forkJoin, map, Observable, switchMap } from "rxjs";
-import { FormBuilder, Validators }                      from "@angular/forms";
-import { BackendService }                               from "../service/backend.service";
+import { Component, HostBinding, OnDestroy, OnInit } from "@angular/core";
+import { filter, forkJoin, map, Observable, Subject, switchMap, takeUntil } from "rxjs";
+import { FormBuilder, Validators } from "@angular/forms";
+import { BackendService } from "../service/backend.service";
 
 @Component({
   selector: "app-charting",
   templateUrl: "./charting.component.html",
   styleUrls: ["./charting.component.scss"]
 })
-export class ChartingComponent implements OnInit {
+export class ChartingComponent implements OnInit, OnDestroy {
+  onDestroy: Subject<void> = new Subject<void>();
   @HostBinding("class") classes = "d-block p-4";
   files: string[] = ["File One", "File Two", "File Three"];
   form = this.formBuilder.group({
@@ -20,6 +21,7 @@ export class ChartingComponent implements OnInit {
   });
   fileObject$ = this.backendService.dummyFileObject();
   view: any[] = [700, 400];
+  fileContentMap: Map<string, any> = new Map<string, any>();
 
   // options
   showXAxis = true;
@@ -39,14 +41,19 @@ export class ChartingComponent implements OnInit {
     this.files = await this.backendService.getFiles().toPromise();
 
     const fileKeys = ["file1", "file2", "file3", "file4"];
+    for (const fileKey of fileKeys) {
+      this.form.get(fileKey).valueChanges.pipe(takeUntil(this.onDestroy.asObservable())).subscribe((file) => this.fileContentMap.set(fileKey, file));
+    }
+
     this.chartData$ = this.form.valueChanges.pipe(
-      filter((formValue) => fileKeys.every((name) => !!formValue[name]) && formValue.key.length),
-      switchMap((formValue) => forkJoin(fileKeys.map(name => this.backendService.getFileToTally(formValue[name])))),
-      map((files: any[]) => {
-        const formValue = this.form.getRawValue();
+      filter((formValue) => formValue.key?.length),
+      map((formValue) => {
         this.yAxisLabel = formValue.key[formValue.key.length - 1];
-        return fileKeys.map((name, index) => {
-          return { name: formValue[name], value: this.getValueFromSchema(files[index], formValue.key) };
+        return fileKeys.map((name) => {
+          return {
+            name: formValue[name],
+            value: this.getValueFromSchema(this.fileContentMap.get(name), formValue.key)
+          };
         });
       })
     );
@@ -66,5 +73,8 @@ export class ChartingComponent implements OnInit {
     formField[method]();
     formField.updateValueAndValidity();
     this.form.updateValueAndValidity();
+  }
+
+  ngOnDestroy(): void {
   }
 }
