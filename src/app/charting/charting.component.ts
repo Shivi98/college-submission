@@ -1,7 +1,7 @@
-import { Component, HostBinding, OnDestroy, OnInit } from "@angular/core";
-import { filter, forkJoin, map, Observable, Subject, switchMap, takeUntil } from "rxjs";
-import { FormBuilder, Validators } from "@angular/forms";
-import { BackendService } from "../service/backend.service";
+import { Component, HostBinding, OnDestroy, OnInit }                   from "@angular/core";
+import { filter, map, Observable, Subject, switchMap, takeUntil, tap } from "rxjs";
+import { FormBuilder, Validators }                                     from "@angular/forms";
+import { BackendService }                                              from "../service/backend.service";
 
 @Component({
   selector: "app-charting",
@@ -42,7 +42,10 @@ export class ChartingComponent implements OnInit, OnDestroy {
 
     const fileKeys = ["file1", "file2", "file3", "file4"];
     for (const fileKey of fileKeys) {
-      this.form.get(fileKey).valueChanges.pipe(takeUntil(this.onDestroy.asObservable())).subscribe((file) => this.fileContentMap.set(fileKey, file));
+      this.form.get(fileKey)
+        .valueChanges
+        .pipe(filter((name) => !!name), switchMap((name) => this.backendService.getFileToTally(name)), takeUntil(this.onDestroy.asObservable()))
+        .subscribe((file) => this.fileContentMap.set(fileKey, file));
     }
 
     this.chartData$ = this.form.valueChanges.pipe(

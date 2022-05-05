@@ -1,18 +1,23 @@
-import { Injectable }      from "@angular/core";
-import { HttpClient }      from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 import { map, Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root"
 })
 export class BackendService {
-  private readonly BASE_URL = "http://loalhost:3000";
+  private readonly BASE_URL = "https://6cf9-103-37-201-177.in.ngrok.io";
 
   constructor(private httpClient: HttpClient) {
   }
 
   getFileToTally(fileName: string): Observable<any> {
-    return this.httpClient.get("./assets/json/dummy-resp.json");
+    return this.httpClient.get(`${this.BASE_URL}/fetchJson?fieldId=${fileName}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      }
+    });
   }
 
   dummyFileObject(): Observable<any> {
@@ -26,6 +31,6 @@ export class BackendService {
   }
 
   getFiles(): Observable<string[]> {
-    return this.httpClient.get(`${this.BASE_URL}/getFiles`).pipe(map((response: Array<Object>) => response.map((obj) => obj["fileId"])));
+    return this.httpClient.get(`${this.BASE_URL}/fetchJsonList`).pipe(map((response: Array<Object>) => response.map((obj) => obj["fileId"])));
   }
 }
